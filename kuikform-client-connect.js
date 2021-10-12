@@ -27,6 +27,14 @@ function initPlugin() {
     );
     kuikformSnackBar = document.querySelector(".kuikform-snackbar");
     kuikformStatusText = document.querySelector("#kuikform-status-text");
+    document.querySelectorAll("[kuikform-id] > input[type=file]").forEach(function(fileField){
+      fileField.onchange =  function(event){
+          if(event.target.files[0].size > 99000000){
+            alert("File size should be less than 99 MB");
+            this.value = "";
+          }
+        }
+    });
     document.querySelectorAll("[kuikform-id]").forEach(function (formElement) {
       formElement.addEventListener(
         "submit",
