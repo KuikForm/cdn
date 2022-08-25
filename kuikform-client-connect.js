@@ -1,10 +1,10 @@
 /* 
-   Client Side JS Library For kuikform.com
-  All the rights reserved to kuikform.com
+   Client Side JS Library For kuikform.tanmoy.codes
+  All the rights reserved to kuikform.tanmoy.codes
   Custom form processor
   Author : Tanmoy Sarkar
   Company : KuikForm
-  Website : https://kuikform.com/
+  Website : https://kuikform.tanmoy.codes/
   Github : https://github.com/Tanmoy741127
 
 */
@@ -17,7 +17,7 @@ let kuikformSnackBar;
 let kuikformStatusText;
 let isInitialized = false;
 let snackBarActive = false;
-const serverEndpoint = "https://kuikform.com/api/v1/submit/";
+const serverEndpoint = "https://kuikform.tanmoy.codes/api/v1/submit/";
 
 function initPlugin() {
   if (!isInitialized) {
@@ -217,7 +217,7 @@ var uploadFile = async function (field) {
   };
 
   var postResp = await fetch(
-    "https://file.kuikform.com/upload/",
+    "https://file.tanmoy.codes/upload/",
     requestOptions
   );
   var post = await postResp.json();
